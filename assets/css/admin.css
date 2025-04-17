@@ -1,0 +1,515 @@
+/* ============================================= */
+/* ========== ADMIN DASHBOARD STYLING ========== */
+/* ==========   GREEN THEME (2024)   ========== */
+/* ============================================= */
+
+:root {
+    /* Color Palette */
+    --primary-green: #2E7D32;
+    --primary-green-light: #60AD5E;
+    --primary-green-dark: #005005;
+    --secondary-green: #81C784;
+    --accent-green: #4CAF50;
+    --light-bg: #F5F7F6;
+    --dark-text: #263238;
+    --light-text: #ECEFF1;
+    --warning: #FFA000;
+    --error: #D32F2F;
+    --success: #388E3C;
+    --info: #1976D2;
+  }
+  
+  /* ========== BASE STYLES ========== */
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .admin-dashboard {
+    min-height: 100vh;
+    padding-bottom: 2rem;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ========== HEADER STYLES ========== */
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .admin-header h1 {
+    color: var(--primary-green-dark);
+    font-weight: 600;
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .admin-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* ========== BUTTON STYLES ========== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+  
+  .btn i.material-icons {
+    font-size: 1.1rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-green);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-green);
+    color: var(--dark-text);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--primary-green-light);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--primary-green);
+    color: white;
+  }
+  
+  .btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* ========== STATS GRID ========== */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-green);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(76, 175, 80, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green-dark);
+    margin-bottom: 0.25rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: #607D8B;
+  }
+  
+  /* ========== DASHBOARD LAYOUT ========== */
+  .dashboard-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 992px) {
+    .dashboard-main {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  .dashboard-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .dashboard-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dashboard-card h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--primary-green-dark);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .dashboard-card h2 i.material-icons {
+    color: var(--primary-green);
+  }
+  
+  /* ========== ACTIVITY FEED ========== */
+  .activity-feed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .activity-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .activity-item:last-child {
+    border-bottom: none;
+  }
+  
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(76, 175, 80, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    flex-shrink: 0;
+  }
+  
+  .activity-content {
+    flex-grow: 1;
+  }
+  
+  .activity-content p {
+    margin: 0 0 0.25rem 0;
+    font-weight: 500;
+  }
+  
+  .activity-content small {
+    color: #78909C;
+    font-size: 0.8rem;
+  }
+  
+  .activity-item.empty {
+    justify-content: center;
+    color: #78909C;
+    padding: 1.5rem 0;
+  }
+  
+  /* ========== QUICK ACTIONS ========== */
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    background-color: rgba(76, 175, 80, 0.05);
+    color: var(--primary-green-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .action-card:hover {
+    background-color: rgba(76, 175, 80, 0.15);
+    transform: translateY(-3px);
+  }
+  
+  .action-card i.material-icons {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+  }
+  
+  .action-card span {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  /* ========== WEATHER WIDGET ========== */
+  .weather-widget {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: white;
+  }
+  
+  .weather-widget h2 {
+    color: white;
+  }
+  
+  .weather-widget h2 i.material-icons {
+    color: white;
+  }
+  
+  .weather-widget h2 small {
+    opacity: 0.8;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  
+  .current-weather {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .weather-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .weather-temp {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .temp-value {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+  
+  .temp-unit {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  .weather-description {
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .weather-stats {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .weather-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .weather-stat i.material-icons {
+    font-size: 1.2rem;
+  }
+  
+  .weather-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .weather-footer small {
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+  
+  /* ========== SYSTEM STATUS ========== */
+  .status-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .status-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .status-item:last-child {
+    border-bottom: none;
+  }
+  
+  .status-item i.material-icons {
+    font-size: 1.2rem;
+  }
+  
+  .status-item.online i.material-icons {
+    color: var(--success);
+  }
+  
+  .status-item.warning i.material-icons {
+    color: var(--warning);
+  }
+  
+  .status-item.error i.material-icons {
+    color: var(--error);
+  }
+  
+  .status-badge {
+    margin-left: auto;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .status-item.online .status-badge {
+    background-color: rgba(56, 142, 60, 0.1);
+    color: var(--success);
+  }
+  
+  .status-item.warning .status-badge {
+    background-color: rgba(255, 160, 0, 0.1);
+    color: var(--warning);
+  }
+  
+  .status-item.error .status-badge {
+    background-color: rgba(211, 47, 47, 0.1);
+    color: var(--error);
+  }
+  
+  /* ========== UTILITY CLASSES ========== */
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Partners Section */
+.partners-section {
+  background: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.partner-logo {
+  max-width: 200px;
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.partner-logo:hover {
+  transform: translateY(-5px);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Admin partners grid */
+.admin .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.admin .partner-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.admin .partner-logo {
+  max-width: 80px;
+  margin-right: 15px;
+}

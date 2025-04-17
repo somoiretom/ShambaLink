@@ -1,0 +1,432 @@
+/* ============================================= */
+/* Farmer Platform Admin - Green Theme */
+/* ============================================= */
+
+/* Base Styles */
+:root {
+  --primary-color: #2e7d32; /* Deep green */
+  --primary-light: #4caf50;
+  --primary-dark: #1b5e20;
+  --secondary-color: #8bc34a;
+  --accent-color: #cddc39;
+  --light-bg: #f1f8e9;
+  --dark-text: #263238;
+  --light-text: #eceff1;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+body.admin-home-content {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: var(--dark-text);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Main Container */
+.admin-home-content .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+.admin-home-content h1 {
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary-light);
+  display: flex;
+  align-items: center;
+}
+
+.admin-home-content h1 i {
+  margin-right: 15px;
+  color: var(--primary-color);
+}
+
+/* Alert Messages */
+.admin-home-content .alert {
+  border-radius: var(--border-radius);
+  padding: 15px;
+  margin-bottom: 25px;
+  border: none;
+}
+
+.admin-home-content .alert-success {
+  background-color: #e8f5e9;
+  color: var(--primary-dark);
+  border-left: 4px solid var(--primary-color);
+}
+
+.admin-home-content .alert-danger {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #f44336;
+}
+
+/* Main Grid Layout */
+.admin-home-content .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.admin-home-content .col-md-4,
+.admin-home-content .col-md-6 {
+  padding: 0 15px;
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  .admin-home-content .col-md-6 {
+    flex: 0 0 50%;
+  }
+  .admin-home-content .col-md-4 {
+    flex: 0 0 33.333%;
+  }
+}
+
+/* Section Cards */
+.admin-home-content .section-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.admin-home-content .section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header */
+.admin-home-content .card-header {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+  color: white;
+  padding: 15px 20px;
+  border-bottom: none;
+}
+
+.admin-home-content .card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.admin-home-content .card-header h3 i {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Card Body */
+.admin-home-content .card-body {
+  padding: 20px;
+}
+
+/* Section Navigation Tabs */
+.admin-home-content .section-nav {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.admin-home-content .section-nav .nav-link {
+  padding: 12px 20px;
+  color: var(--dark-text);
+  font-weight: 500;
+  border: none;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.admin-home-content .section-nav .nav-link:hover {
+  color: var(--primary-color);
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.admin-home-content .section-nav .nav-link.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background: transparent;
+}
+
+/* Form Elements */
+.admin-home-content .form-group {
+  margin-bottom: 20px;
+}
+
+.admin-home-content label {
+  font-weight: 500;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.admin-home-content .form-control {
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  transition: var(--transition);
+}
+
+.admin-home-content .form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+/* Custom File Input */
+.admin-home-content .custom-file-label {
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.admin-home-content .custom-file-label::after {
+  background: var(--primary-light);
+  color: white;
+  border: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Buttons */
+.admin-home-content .btn {
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+}
+
+.admin-home-content .btn-primary {
+  background-color: var(--primary-color);
+}
+
+.admin-home-content .btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.admin-home-content .btn-success {
+  background-color: var(--secondary-color);
+}
+
+.admin-home-content .btn-success:hover {
+  background-color: #7cb342;
+}
+
+.admin-home-content .btn-danger {
+  background-color: #e53935;
+}
+
+.admin-home-content .btn-danger:hover {
+  background-color: #c62828;
+}
+
+/* Tables */
+.admin-home-content .table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-home-content .table th {
+  background-color: var(--light-bg);
+  color: var(--primary-dark);
+  font-weight: 500;
+  padding: 12px 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.admin-home-content .table td {
+  padding: 12px 15px;
+  border-top: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.admin-home-content .table tr:hover td {
+  background-color: rgba(139, 195, 74, 0.05);
+}
+
+/* Badges */
+.admin-home-content .badge {
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.admin-home-content .badge-success {
+  background-color: var(--primary-light);
+}
+
+.admin-home-content .badge-primary {
+  background-color: var(--primary-color);
+}
+
+/* Media Previews */
+.admin-home-content .media-preview {
+  background: var(--light-bg);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.admin-home-content .media-preview img,
+.admin-home-content .media-preview video {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: var(--border-radius);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image Thumbnails */
+.admin-home-content .img-thumbnail {
+  max-height: 60px;
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e0e0;
+  padding: 3px;
+  background: white;
+}
+
+/* Horizontal Rule */
+.admin-home-content hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 25px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .admin-home-content .col-md-6 {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .admin-home-content .section-nav {
+    flex-wrap: wrap;
+  }
+  
+  .admin-home-content .section-nav .nav-link {
+    padding: 10px 15px;
+  }
+  
+  .admin-home-content .card-body {
+    padding: 15px;
+  }
+}
+
+/* Tab Content */
+.admin-home-content .tab-content {
+  padding: 15px 0;
+}
+
+/* List Group */
+.admin-home-content .list-group-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius) !important;
+  transition: var(--transition);
+}
+
+.admin-home-content .list-group-item:hover {
+  background-color: var(--light-bg);
+}
+
+/* Checkboxes */
+.admin-home-content .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Modal Styling */
+.admin-home-content .modal-content {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.admin-home-content .modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.admin-home-content .modal-title {
+  font-weight: 500;
+}
+
+/* Input Groups */
+.admin-home-content .input-group-text {
+  background-color: var(--primary-light);
+  color: white;
+  border: none;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Utility Classes */
+.admin-home-content .mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.admin-home-content .mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.admin-home-content .text-muted {
+  color: #757575 !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-home-content .section-card {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Delay animations for staggered effect */
+.admin-home-content .col-md-4:nth-child(1) .section-card,
+.admin-home-content .col-md-6:nth-child(1) .section-card {
+  animation-delay: 0.1s;
+}
+
+.admin-home-content .col-md-4:nth-child(2) .section-card,
+.admin-home-content .col-md-6:nth-child(2) .section-card {
+  animation-delay: 0.2s;
+}
+
+.admin-home-content .col-md-4:nth-child(3) .section-card {
+  animation-delay: 0.3s;
+}
